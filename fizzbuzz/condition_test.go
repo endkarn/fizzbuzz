@@ -45,3 +45,25 @@ func Test_FizzBuzz_By_Number_7_Should_Be_7(t *testing.T) {
 		t.Errorf("Expected %s but get %s .", expected, actual)
 	}
 }
+
+func Test_FizzBuzz_By_Number_15_Should_Be_FizzBuzz(t *testing.T) {
+	expected := "FizzBuzz"
+	number := 15
+
+	actual := FizzBuzz(number)
+
+	if expected != actual {
+		t.Errorf("Expected %s but get %s .", expected, actual)
+	}
+}
+
+func Test_FizzBuzz_By_Number_22_Should_Be_22(t *testing.T) {
+	expected := "22"
+	number := 22
+
+	actual := FizzBuzz(number)
+
+	if expected != actual {
+		t.Errorf("Expected %s but get %s .", expected, actual)
+	}
+}
