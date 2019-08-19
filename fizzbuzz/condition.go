@@ -8,15 +8,19 @@ const (
 	fizzBuzzNumber = 15
 )
 
+var fizzBuzzMap = make(map[int]string)
+
+func init() {
+	fizzBuzzMap[fizzBuzzNumber] = "FizzBuzz"
+	fizzBuzzMap[buzzNumber] = "Buzz"
+	fizzBuzzMap[fizzNumber] = "Fizz"
+}
+
 func FizzBuzz(number int) string {
-	if number%fizzBuzzNumber == 0 {
-		return "FizzBuzz"
-	}
-	if number%buzzNumber == 0 {
-		return "Buzz"
-	}
-	if number%fizzNumber == 0 {
-		return "Fizz"
+	for keyMap, valueMap := range fizzBuzzMap {
+		if number%keyMap == 0 {
+			return valueMap
+		}
 	}
 	return strconv.Itoa(number)
 }
