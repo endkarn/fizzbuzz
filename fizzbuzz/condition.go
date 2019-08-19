@@ -2,14 +2,20 @@ package fizzbuzz
 
 import "strconv"
 
+const (
+	FizzNumber     = 3
+	BuzzNumber     = 5
+	FizzBuzzNumber = 15
+)
+
 func FizzBuzz(number int) string {
-	if number % 15 == 0 {
+	if number%FizzBuzzNumber == 0 {
 		return "FizzBuzz"
 	}
-	if number % 5 == 0 {
+	if number%BuzzNumber == 0 {
 		return "Buzz"
 	}
-	if number % 3 == 0 {
+	if number%FizzNumber == 0 {
 		return "Fizz"
 	}
 	return strconv.Itoa(number)
