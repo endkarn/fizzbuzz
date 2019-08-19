@@ -3,19 +3,19 @@ package fizzbuzz
 import "strconv"
 
 const (
-	FizzNumber     = 3
-	BuzzNumber     = 5
-	FizzBuzzNumber = 15
+	fizzNumber     = 3
+	buzzNumber     = 5
+	fizzBuzzNumber = 15
 )
 
 func FizzBuzz(number int) string {
-	if number%FizzBuzzNumber == 0 {
+	if number%fizzBuzzNumber == 0 {
 		return "FizzBuzz"
 	}
-	if number%BuzzNumber == 0 {
+	if number%buzzNumber == 0 {
 		return "Buzz"
 	}
-	if number%FizzNumber == 0 {
+	if number%fizzNumber == 0 {
 		return "Fizz"
 	}
 	return strconv.Itoa(number)
